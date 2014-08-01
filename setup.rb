@@ -11,12 +11,15 @@ client.query("DROP DATABASE IF EXISTS attalon_production;")
 client.query("CREATE DATABASE attalon_production;")
 
 client.query("USE attalon_production;")
-statements = File.read('create_schema.sql').split(';')
 
-statements.each do |statement|
-  puts statement
-  result = client.query(statement + ";")
-  puts result
+['create_schema.sql', 'seed_db.sql'].each do |file|
+  statements = File.read(file).split(';')
+
+  statements.each do |statement|
+    puts statement
+    result = client.query(statement + ";")
+    puts result
+  end
 end
 
 client.close

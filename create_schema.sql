@@ -46,16 +46,16 @@ CREATE TABLE ads(
 DROP TABLE IF EXISTS campaigns;
 
 CREATE TABLE campaigns(
-  id              INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  title           TEXT               NOT NULL,
-  start_date      DATE               NOT NULL,
-  end_date        DATE               NOT NULL,
-  monetary_budget NUMERIC(3)         NOT NULL,
-  action_budget   BIGINT             NOT NULL,
-  status          TEXT               NOT NULL,
-  currency_id     INT                NOT NULL,
-  type_id         INT                NOT NULL,
-  user_id         INT                NOT NULL
+  id                INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  title             TEXT               NOT NULL,
+  start_date        DATE               NOT NULL,
+  end_date          DATE               NOT NULL,
+  monetary_budget   NUMERIC(3)         NOT NULL,
+  action_budget     BIGINT             NOT NULL,
+  status            TEXT               NOT NULL,
+  currency_id       INT                NOT NULL,
+  campaign_type_id  INT                NOT NULL,
+  user_id           INT                NOT NULL
 );
 
 
