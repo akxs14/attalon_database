@@ -7,3 +7,16 @@ client  = Mysql2::Client.new(:host     => "localhost",
                              :password => "",
                              :flags    => Mysql2::Client::MULTI_STATEMENTS)
 
+client.query("DROP DATABASE IF EXISTS attalon_production;")
+client.query("CREATE DATABASE attalon_production;")
+
+client.query("USE attalon_production;")
+statements = File.read('create_schema.sql').split(';')
+
+statements.each do |statement|
+  puts statement
+  result = client.query(statement + ";")
+  puts result
+end
+
+client.close
