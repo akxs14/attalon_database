@@ -6,4 +6,4 @@ Attalon's RDBMS schema (for MySQL / Google Cloud SQL). Used by Attalon platform 
 Notes:
 ------
 
-campaigns.status can be "planned", "active", "stopped", "finished".
+- campaigns.status can be "planned", "active", "stopped", "finished".

@@ -26,7 +26,51 @@ INSERT INTO currencies(
   )
   VALUES(
     "Euro",
-    "eur",
+    "EUR",
+    1
+  );
+
+INSERT INTO currencies(
+    name,
+    symbol,
+    rate_to_euro
+  )
+  VALUES(
+    "US Dollar",
+    "USD",
+    1
+  );
+
+INSERT INTO currencies(
+    name,
+    symbol,
+    rate_to_euro
+  )
+  VALUES(
+    "British Pound",
+    "GBP",
+    1
+  );
+
+INSERT INTO currencies(
+    name,
+    symbol,
+    rate_to_euro
+  )
+  VALUES(
+    "Renminbi",
+    "CNY",
+    1
+  );
+
+INSERT INTO currencies(
+    name,
+    symbol,
+    rate_to_euro
+  )
+  VALUES(
+    "Japanese Yen",
+    "JPY",
     1
   );
 
@@ -37,6 +81,15 @@ INSERT INTO campaign_types(
   VALUES(
     "CPM",
     "Cost Per Mile"
+  );
+
+INSERT INTO campaign_types(
+    symbol,
+    name
+  )
+  VALUES(
+    "CPC",
+    "Cost Per Click"
   );
 
 INSERT INTO campaigns(
