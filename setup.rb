@@ -2,15 +2,17 @@
 require 'rubygems'
 require 'mysql2'
 
-client  = Mysql2::Client.new(:host     => "localhost",
-                             :username => "root", 
-                             :password => "",
+database = "cdb_aed9a5130e"
+
+client  = Mysql2::Client.new(:host     => "eu-cdbr-azure-west-a.cloudapp.net", #"localhost",
+                             :username => "bc90fbb14b922e",# "root", 
+                             :password => "ec4774d0", #""
                              :flags    => Mysql2::Client::MULTI_STATEMENTS)
 
-client.query("DROP DATABASE IF EXISTS attalon_production;")
-client.query("CREATE DATABASE attalon_production;")
+# client.query("DROP DATABASE IF EXISTS #{database};")
+# client.query("CREATE DATABASE #{database};")
 
-client.query("USE attalon_production;")
+client.query("USE #{database};")
 
 ['create_schema.sql', 'seed_db.sql'].each do |file|
   statements = File.read(file).split(';')
