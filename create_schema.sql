@@ -126,3 +126,14 @@ CREATE TABLE remaining_budgets(
   user_id           INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
   remaining_budget  NUMERIC(3)         NOT NULL
 );
+
+
+DROP TABLE IF EXISTS creative_templates;
+
+CREATE TABLE creative_templates(
+  id           INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  description  TEXT               NOT NULL,
+  html         TEXT               NOT NULL,
+  width        NUMERIC(4)         NOT NULL,
+  height       NUMERIC(4)         NOT NULL
+)

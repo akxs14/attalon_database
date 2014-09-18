@@ -2,11 +2,11 @@
 require 'rubygems'
 require 'mysql2'
 
-database = "cdb_aed9a5130e"
+database = "attalon_production" # "cdb_aed9a5130e"
 
-client  = Mysql2::Client.new(:host     => "eu-cdbr-azure-west-a.cloudapp.net", #"localhost",
-                             :username => "bc90fbb14b922e",# "root", 
-                             :password => "ec4774d0", #""
+client  = Mysql2::Client.new(:host     => "localhost",#"eu-cdbr-azure-west-a.cloudapp.net",
+                             :username => "root", #"bc90fbb14b922e", 
+                             :password => "", #"ec4774d0",
                              :flags    => Mysql2::Client::MULTI_STATEMENTS)
 
 # client.query("DROP DATABASE IF EXISTS #{database};")

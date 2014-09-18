@@ -159,4 +159,30 @@ VALUES(
   1,
   1,
   1
-);
+)
+
+-- INSERT INTO creative_templates(
+--   description,
+--   html,
+--   width,
+--   height
+-- )
+-- VALUES(
+--   "Large mobile banner (320x100)",
+--   '<span style="width:320px height:100px "><img id="logo" style="position:absolute top:0px left:0px" src="creative_parts/{{.logo}}"/><img id="image" style="position:absolute top:0px left:60px " src="creative_parts/{{.image}}"/><div id="text" style="position:absolute top:15px left:65px color:white font-size:12px text:{{.text}} ">{{.text}}</div><div id="price" style="position:absolute top:29px left:65px color:white font-size:16px text:{{.price}} ">{{.price}}</div></span>',
+--   320,
+--   100
+-- );
+
+-- INSERT INTO creative_templates(
+--   description,
+--   html,
+--   width,
+--   height
+-- )
+-- VALUES(
+--   "Large mobile banner (320x50)",
+--   "",
+--   320,
+--   50
+-- )
